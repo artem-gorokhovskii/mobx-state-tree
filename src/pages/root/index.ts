@@ -1,0 +1,1 @@
+export { RootComponent as Root } from './root-component';

@@ -1,0 +1,9 @@
+.post-detail {
+    width: 100%;
+}
+
+.post-detail .post-detail__title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 32px;
+}

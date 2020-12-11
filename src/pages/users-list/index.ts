@@ -1,0 +1,1 @@
+export { UsersListComponent as UsersList } from './users-list-component';

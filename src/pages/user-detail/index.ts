@@ -1,0 +1,1 @@
+export { UserDetailComponent as UserDetail } from './user-detail-component';

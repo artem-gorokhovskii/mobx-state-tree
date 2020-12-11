@@ -1,0 +1,13 @@
+.posts-list .users-table {
+    border-spacing: 0;
+}
+
+.posts-list .users-table td,
+.posts-list .users-table th {
+    border: 0;
+}
+
+.posts-list .users-table .users-table__row:hover {
+    background: #cccccc55;
+    cursor: pointer;
+}

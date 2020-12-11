@@ -1,0 +1,20 @@
+.page-posts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-posts-list .page-posts-list__button {
+    border: 1px solid #fff;
+    margin-top: 16px;
+    padding: 15px 10px;
+    width: 100%;
+    max-width: 200px;
+    background: #cccccc99;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.page-posts-list .page-posts-list__button:hover {
+    cursor: pointer;
+}

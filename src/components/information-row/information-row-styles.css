@@ -1,0 +1,25 @@
+.information-row {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.information-row .information-row__key {
+    font-weight: bold;
+}
+
+.information-row .information-row__space {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+    height: 1rem;
+    border-bottom: 1px dotted #ccc;
+}
+
+.information-row .information-row__value {
+    font-weight: bold;
+    color: #ccc;
+}
