@@ -5,6 +5,7 @@ import { UsersList } from '../users-list';
 import { UserDetail } from '../user-detail';
 import { PostDetail } from '../post-detail';
 import { PostsList } from '../posts-list';
+import { Chart } from '../chart';
 import { RoutesPaths } from './routes-const';
 
 export const RoutesComponent = () => {
@@ -15,6 +16,7 @@ export const RoutesComponent = () => {
             <Route path={RoutesPaths.USER_DETAIL} component={UserDetail} />
             <Route path={RoutesPaths.POSTS_LIST} component={PostsList} exact />
             <Route path={RoutesPaths.POST_DETAIL} component={PostDetail} />
+            <Route path={RoutesPaths.CHART} component={Chart} />
         </>
     );
 }

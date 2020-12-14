@@ -8,5 +8,9 @@ export const PAGES = [
     {
         title: 'Posts list',
         link: RoutesPaths.POSTS_LIST,
+    },
+    {
+        title: 'Chart',
+        link: RoutesPaths.CHART,
     }
 ]

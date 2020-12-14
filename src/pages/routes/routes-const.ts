@@ -3,5 +3,6 @@ export enum RoutesPaths {
     USERS_LIST = '/users',
     USER_DETAIL = '/users/:userId',
     POSTS_LIST = '/posts',
-    POST_DETAIL = '/posts/:postId'
+    POST_DETAIL = '/posts/:postId',
+    CHART = '/chart',
 }

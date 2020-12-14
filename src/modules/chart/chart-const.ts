@@ -1,0 +1,1 @@
+export const CHART_URL = 'http://localhost:8080/sse';
