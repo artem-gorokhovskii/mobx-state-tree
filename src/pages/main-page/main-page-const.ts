@@ -12,5 +12,9 @@ export const PAGES = [
     {
         title: 'Chart',
         link: RoutesPaths.CHART,
+    },
+    {
+        title: 'Registration form',
+        link: RoutesPaths.REGISTRATION_FORM,
     }
 ]
