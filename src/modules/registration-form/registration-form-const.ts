@@ -26,3 +26,5 @@ export enum AGE_ERRORS {
 export enum GENDER_ERRORS {
     EMPTY_VALUE = 'this field is required',
 };
+
+export const REGISTRATION_FORM_STORAGE_KEY = 'REGISTRATION_FORM';

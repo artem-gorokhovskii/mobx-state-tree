@@ -1,4 +1,4 @@
-import { types } from 'mobx-state-tree';
+import { types, getSnapshot } from 'mobx-state-tree';
 import { ChangeEvent } from 'react';
 import { selectOptionModel, DEFAULT_SELECT_OPTION, SelectOption } from '../../components/select';
 import {
@@ -9,6 +9,7 @@ import {
     AGE_MASK,
     AGE_ERRORS,
     GENDER_ERRORS,
+    REGISTRATION_FORM_STORAGE_KEY,
 } from './registration-form-const';
 
 export const RegistrationFormStore = types.model({

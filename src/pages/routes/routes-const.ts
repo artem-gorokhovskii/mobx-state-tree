@@ -6,4 +6,5 @@ export enum RoutesPaths {
     POST_DETAIL = '/posts/:postId',
     CHART = '/chart',
     REGISTRATION_FORM = '/registration-form',
+    FUN = '/fun',
 }
