@@ -33,6 +33,7 @@ function sendRequest(id, type) {
 
 
 const wss = new WebSocket.Server({ port: PORT });
+console.log('Websocket server is listening ' + PORT + ' port');
 
 wss.on('connection', (ws) => {
     const id = Math.round(Math.random() * Date.now());

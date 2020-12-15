@@ -3,7 +3,7 @@ import { TYPES_OF_CONTENT, FUN_URL, getTextType } from './fun-const';
 import { FunTypes } from './fun-types';
 
 export const FunStore = types.model({
-    content: types.optional(types.string, ''),
+    content: '',
     selectedType: types.optional(types.enumeration(Object.values(TYPES_OF_CONTENT)), TYPES_OF_CONTENT.JOKES),
 })
     .views((self) => ({
