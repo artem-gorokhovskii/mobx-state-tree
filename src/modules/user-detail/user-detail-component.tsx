@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 import { UserDetailTypes } from './user-detail-types';
-import { InformationRow } from '../../components/information-row'
+import { InformationRow } from '../../components/information-row';
+import { FavouritesContext } from '../favourites';
 import './user-detail-styles.css';
 
 export const UserDetailComponent: React.FC<UserDetailTypes.Props> = observer(({ store, userId, handleRowClick }) => {
@@ -14,6 +15,19 @@ export const UserDetailComponent: React.FC<UserDetailTypes.Props> = observer(({ 
         handleRowClick(Number(event.currentTarget.getAttribute('data-id')));
     }, [ handleRowClick ]);
 
+    const favourites = React.useContext(FavouritesContext);
+
+    const addUserToFavourites = React.useCallback(() => {
+        favourites?.addUser(store.user.id);
+    }, [favourites]);
+
+    const removeUserFromFavourites = React.useCallback(() => {
+        favourites?.deleteUser(store.user.id);
+    }, [favourites]);
+
+    const postIsFavourite = favourites?.users.get(String(store.user.id));
+    const favouriteValue = postIsFavourite ? 'Yes' : 'No';
+
     return (
         <>
             {
@@ -24,6 +38,9 @@ export const UserDetailComponent: React.FC<UserDetailTypes.Props> = observer(({ 
                         <InformationRow keyName="email" value={store.user.email} />
                         <InformationRow keyName="phone" value={store.user.phone} />
                         <InformationRow keyName="address" value={store.user.fullAddress} />
+                        <InformationRow keyName="favourite" value={favouriteValue} />
+                        {!postIsFavourite && <button onClick={addUserToFavourites}>Add to favourites</button>}
+                        {postIsFavourite && <button onClick={removeUserFromFavourites}>Remove from favourites</button>}
 
                         <div className="user-detail user-detail__title">User posts</div>
 

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
+import cn from 'classnames';
 import { UsersNS } from './users-list-types';
+import { FavouritesContext } from '../favourites';
 import './users-list-styles.css';
 
 export const UsersListComponent: React.FC<UsersNS.Props> = observer(({ store, handleRowClick }) => {
@@ -11,6 +13,8 @@ export const UsersListComponent: React.FC<UsersNS.Props> = observer(({ store, ha
     const onRowClick = React.useCallback((event: React.MouseEvent) => {
         handleRowClick(Number(event.currentTarget.getAttribute('data-id')));
     }, [ handleRowClick ]);
+
+    const favourites = React.useContext(FavouritesContext);
 
     return (
         <div className="users-list">
@@ -27,7 +31,9 @@ export const UsersListComponent: React.FC<UsersNS.Props> = observer(({ store, ha
                         {!!store.numberOfUsers && store.data.map(user => (
                             <tr
                                 key={user.id}
-                                className="users-table__row"
+                                className={cn("users-table__row", {
+                                    "users-table__row--favourite": favourites?.users.get(String(user.id))
+                                })}
                                 data-id={user.id}
                                 onClick={onRowClick}
                             >

@@ -3,3 +3,4 @@ package-lock.json
 /back-ws/node_modules
 /back-ws/package-lock.json
 .eslintcache
+debug.log

@@ -1,13 +1,17 @@
-.posts-list .users-table {
+.posts-list .posts-table {
     border-spacing: 0;
 }
 
-.posts-list .users-table td,
-.posts-list .users-table th {
+.posts-list .posts-table td,
+.posts-list .posts-table th {
     border: 0;
 }
 
-.posts-list .users-table .users-table__row:hover {
+.posts-list .posts-table .posts-table__row.posts-table__row--favourite {
+    background-color: rgba(200, 255, 200, 0.2);
+}
+
+.posts-list .posts-table .posts-table__row:hover {
     background: #cccccc55;
     cursor: pointer;
 }

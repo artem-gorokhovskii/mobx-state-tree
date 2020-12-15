@@ -7,6 +7,10 @@
     border: 0;
 }
 
+.users-list .users-table .users-table__row.users-table__row--favourite {
+    background-color: rgba(200, 255, 200, 0.2);
+}
+
 .users-list .users-table .users-table__row:hover {
     background: #cccccc55;
     cursor: pointer;
