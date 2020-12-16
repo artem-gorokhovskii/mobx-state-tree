@@ -32,7 +32,7 @@ export const PostsListComponent: React.FC<PostListTypes.Props> = observer(({ sto
                             <tr
                                 key={post.id}
                                 className={cn("posts-table__row", {
-                                    "posts-table__row--favourite": favourites?.posts.get(String(post.id))
+                                    "posts-table__row--favourite": favourites.posts.get(String(post.id))
                                 })}
                                 data-id={post.id}
                                 onClick={onRowClick}

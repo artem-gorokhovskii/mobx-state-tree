@@ -32,7 +32,7 @@ export const UsersListComponent: React.FC<UsersNS.Props> = observer(({ store, ha
                             <tr
                                 key={user.id}
                                 className={cn("users-table__row", {
-                                    "users-table__row--favourite": favourites?.users.get(String(user.id))
+                                    "users-table__row--favourite": favourites.users.get(String(user.id))
                                 })}
                                 data-id={user.id}
                                 onClick={onRowClick}

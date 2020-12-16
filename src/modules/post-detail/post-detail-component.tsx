@@ -14,14 +14,14 @@ export const PostDetailComponent: React.FC<PostDetailTypes.Props> = observer(({ 
     const favourites = React.useContext(FavouritesContext);
 
     const addPostToFavourites = React.useCallback(() => {
-        favourites?.addPost(store.post.id);
+        favourites.addPost(store.post.id);
     }, [favourites]);
 
     const removePostFromFavourites = React.useCallback(() => {
-        favourites?.deletePost(store.post.id);
+        favourites.deletePost(store.post.id);
     }, [favourites]);
 
-    const postIsFavourite = favourites?.posts.get(String(store.post.id));
+    const postIsFavourite = favourites.posts.get(String(store.post.id));
     const favouriteValue = postIsFavourite ? 'Yes' : 'No';
 
     return (

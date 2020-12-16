@@ -18,14 +18,14 @@ export const UserDetailComponent: React.FC<UserDetailTypes.Props> = observer(({ 
     const favourites = React.useContext(FavouritesContext);
 
     const addUserToFavourites = React.useCallback(() => {
-        favourites?.addUser(store.user.id);
+        favourites.addUser(store.user.id);
     }, [favourites]);
 
     const removeUserFromFavourites = React.useCallback(() => {
-        favourites?.deleteUser(store.user.id);
+        favourites.deleteUser(store.user.id);
     }, [favourites]);
 
-    const postIsFavourite = favourites?.users.get(String(store.user.id));
+    const postIsFavourite = favourites.users.get(String(store.user.id));
     const favouriteValue = postIsFavourite ? 'Yes' : 'No';
 
     return (
